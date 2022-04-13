@@ -30,8 +30,8 @@ require 'parallel'
 require 'zlib'
 include FileUtils
 
-BUILD_DIR = "./AirFont/" # Output path
-SOUNDFONT = "/home/juanky/Downloads/airfont_380_final.sf2" # Soundfont file path
+BUILD_DIR = "./8MBGSFX" # Output path
+SOUNDFONT = "/home/juanky/Downloads/8MBGSFX.sf2" # Soundfont file path
 
 # This script will generate MIDI.js-compatible instrument JS files for
 # all instruments in the below array. Add or remove as necessary.
