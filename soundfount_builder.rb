@@ -30,8 +30,14 @@ require 'parallel'
 require 'zlib'
 include FileUtils
 
-BUILD_DIR = "./8MBGSFX" # Output path
-SOUNDFONT = "/home/juanky/Downloads/8MBGSFX.sf2" # Soundfont file path
+if ARGV.length < 2
+    abort("Need 2 arguments; 1st 'sound-font file path', 2nd 'output path'")
+end
+
+BUILD_DIR = ARGV[1] # Output path
+SOUNDFONT = ARGV[0] # Soundfont file path
+
+%x(mkdir -p BUILD_DIR)
 
 # This script will generate MIDI.js-compatible instrument JS files for
 # all instruments in the below array. Add or remove as necessary.
